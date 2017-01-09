@@ -1,0 +1,28 @@
+/* Color */
+.color_anti_flash_white {
+  color: #E8F1F2;
+}
+
+/* Font */
+.font_raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Font size */
+.font_size_50px {
+  font-size: 50px
+}
+
+.font_size_24px {
+  font-size: 24px;
+}
+
+/* Text transform */
+.text_transform_uppercase {
+  text-transform: uppercase;
+}
+
+/* Padding */
+.padding_bottom_50px {
+  padding-bottom: 50px;
+}

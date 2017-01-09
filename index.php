@@ -9,7 +9,12 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Pagepiling -->
     <link rel="stylesheet" type="text/css" href="resources/jquery.pagepiling.css" />
+    <!-- Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <!-- Portfolio styles -->
+    <link rel="stylesheet" href="portfolioStyles.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,33 +23,55 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <body ng-app="portfolioApp" ng-controller="resumeCtrl" ng-clock>
 
+    <!-- Language bar -->
+    <div class=" row">
+      <div class="col-sm-2 pull-right btn-group" role="group" aria-label="">
+        <button type="button" class="btn btn-xs btn-primary">中</button>
+        <button type="button" class="btn btn-xs btn-primary">En</button>
+      </div>
+    </div>
+
+    <!-- Main content -->
     <div id="pagepiling">
-        <div class="section">Some section</div>
+        <!-- Section #1 -->
+        <div class="section">
+          <div class="row padding_bottom_50px">
+            <img src="img/minion2.png"
+              class="img-responsive center-block" alt="portrait" />
+          </div>
+          <div class="row text-center">
+            <p class="en color_anti_flash_white font_raleway font_size_50px">
+              <b>Sabrina Zhai</b>
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-3 col-sm-6 text-center">
+              <p class="en color_anti_flash_white font_raleway font_size_24px text_transform_uppercase">
+                Web Application Developer
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="section">Some section</div>
         <div class="section">Some section</div>
         <div class="section">Some section</div>
     </div>
 
-    <!------------ JavaScript ------------>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-          sectionsColor: ['#1B98E0', '#247BA0', '#1B98E0', '#247BA0'],
-          navigation: {
-			    	'position': 'right',
-			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
-			   	}
-        });
-      });
-    </script>
-
     <!------------ JavaScript Resources ------------>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- AngularJs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- Pagepiling -->
     <script type="text/javascript" src="resources/jquery.pagepiling.min.js"></script>
+
+    <!------------ JavaScript specific to this application ------------>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/portfolioApp.js"></script>
+    <script type="text/javascript" src="js/resumeCtrl.js"></script>
   </body>
 </html>
