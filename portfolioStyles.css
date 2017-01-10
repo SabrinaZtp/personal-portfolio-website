@@ -4,6 +4,9 @@
 }
 
 /* Font */
+.body {
+  font-family: 'Raleway', sans-serif;
+}
 .font_raleway {
   font-family: 'Raleway', sans-serif;
 }
@@ -25,4 +28,31 @@
 /* Padding */
 .padding_bottom_50px {
   padding-bottom: 50px;
+}
+
+/* Heading of section */
+.section_heading {
+  border: 4px solid #E8F1F2;
+  padding: 5px 20px;
+  color: #E8F1F2;
+}
+
+/* Skill tag */
+.tag {
+  background-color: #247BA0;
+  color: #E8F1F2;
+  font-size: 1.17em;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 8px;
+  margin-bottom: 15px;
+}
+
+.tag.opacity_0p75 {
+  opacity: 0.75;
+}
+
+.tag.opacity_0p5 {
+  opacity: 0.5;
 }

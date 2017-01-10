@@ -26,7 +26,7 @@
   <body ng-app="portfolioApp" ng-controller="resumeCtrl" ng-clock>
 
     <!-- Language bar -->
-    <div class=" row">
+    <div class="row">
       <div class="col-sm-2 pull-right btn-group" role="group" aria-label="">
         <button type="button" class="btn btn-xs btn-primary">中</button>
         <button type="button" class="btn btn-xs btn-primary">En</button>
@@ -54,7 +54,29 @@
             </div>
           </div>
         </div>
-        <div class="section">Some section</div>
+
+        <!-- Section #2 -->
+        <div class="section">
+          <div class="row text-center">
+            <h2><b><span class="section_heading font_raleway text_transform_uppercase">Skills</span></b></h2>
+          </div>
+          <div class="row">
+            <br><br>
+          </div>
+          <div class="row text-center">
+            <div class="tag">HTML</div><div class="tag opacity_0p75">CSS</div>
+          </div>
+          <div class="row text-center">
+            <div class="tag">AngularJS</div><div class="tag">jQuery</div><div class="tag opacity_0p75">JavaScript</div>
+          </div>
+          <div class="row text-center">
+            <div class="tag">SQL</div>
+          </div>
+          <div class="row text-center">
+            <div class="tag opacity_0p75">Java</div><div class="tag opacity_0p5">PHP</div><div class="tag opacity_0p5">C#</div>
+          </div>
+        </div>
+
         <div class="section">Some section</div>
         <div class="section">Some section</div>
     </div>
