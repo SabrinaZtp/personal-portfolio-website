@@ -77,7 +77,33 @@
           </div>
         </div>
 
-        <div class="section">Some section</div>
+        <!-- Section #3 -->
+        <div class="section">
+          <div class="row text-center">
+            <h2><b><span class="section_heading font_raleway text_transform_uppercase">Projects</span></b></h2>
+          </div>
+          <div class="row">
+            <br><br>
+          </div>
+          <!-- Gallary -->
+          <div class="row">
+            <!-- Image #1 -->
+            <div class="col-sm-offset-3 col-sm-3">
+              <div class="projectImgWrapper">
+                <a href="#">
+                  <img class="projectImage" src="img/chicken.jpeg" width="100%" alt="Daily QA Web App" />
+                </a>
+                <div class="imgLabel">
+                  <div class="imgLabel-text">
+                    <a class="text-title">Daily QA Web App</a>
+                    <span class="text-category">AngularJS</span>
+                  </div>
+                  <div class="label-bg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="section">Some section</div>
     </div>
 
