@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Angular material styles -->
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css">
     <!-- Pagepiling -->
     <link rel="stylesheet" type="text/css" href="resources/jquery.pagepiling.css" />
     <!-- Google font -->
@@ -90,7 +92,7 @@
             <!-- Image #1 -->
             <div class="col-sm-offset-3 col-sm-3">
               <div class="projectImgWrapper">
-                <a href="#">
+                <a ng-click="showProjectDetail('dailyqa', $event)">
                   <img class="projectImage" src="img/chicken.jpeg" width="100%" alt="Daily QA Web App" />
                 </a>
                 <div class="imgLabel">
@@ -108,14 +110,18 @@
     </div>
 
     <!------------ JavaScript Resources ------------>
+    <!-- AngularJs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- AngularJs -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!-- Pagepiling -->
     <script type="text/javascript" src="resources/jquery.pagepiling.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js"></script>
 
     <!------------ JavaScript specific to this application ------------>
     <script type="text/javascript" src="js/index.js"></script>
