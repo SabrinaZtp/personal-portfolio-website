@@ -88,19 +88,23 @@
             <br><br>
           </div>
           <!-- Gallary -->
-          <div class="row">
-            <!-- Image #1 -->
-            <div class="col-sm-offset-3 col-sm-3">
-              <div class="projectImgWrapper">
-                <a ng-click="showProjectDetail('dailyqa', $event)">
-                  <img class="projectImage" src="img/chicken.jpeg" width="100%" alt="Daily QA Web App" />
-                </a>
-                <div class="imgLabel">
-                  <div class="imgLabel-text">
-                    <a class="text-title">Daily QA Web App</a>
-                    <span class="text-category">AngularJS</span>
+          <div ng-repeat="(tKey, tValue) in projectTitleObj track by $index">
+            <div class="row">
+              <!-- Image -->
+              <div class="col-sm-offset-2 col-sm-4">
+                <div class="projectImgWrapper">
+                  <a ng-click="showProjectDetail(tKey, $event)">
+                    <img class="projectImage" src="{{projectImgsrcObj[tKey][0]}}" width="100%" alt="Daily QA Web App" />
+                  </a>
+                  <div class="imgLabel">
+                    <div class="imgLabel-text">
+                      <a class="text-title" ng-bind="tValue"></a>
+                      <p class="text-category">
+                        <span ng-repeat="skill in projectSkillObj[tKey]" ng-bind="skill"></span>
+                      </p>
+                    </div>
+                    <div class="label-bg"></div>
                   </div>
-                  <div class="label-bg"></div>
                 </div>
               </div>
             </div>

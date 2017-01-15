@@ -1,0 +1,24 @@
+<md-dialog aria-label="Project details">
+  <form ng-cloak>
+
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel();" aria-label="close dialog">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content font_raleway">
+        <img ng-repeat="pimgsrc in projectImgsrc" src="{{pimgsrc}}" width="100%" alt="{{pimgsrc}}">
+        <h3 ng-bind="projectTitle"></h3>
+        <ul>
+          <li ng-repeat="ptask in projectTask" ng-bind="ptask"></li>
+        </ul>
+      </div>
+    </md-dialog-content>
+
+  </form>
+</md-dialog>

@@ -102,6 +102,11 @@ a, a:hover {
   display: block;
 }
 
+.text-category span{
+  display : inline;
+  margin-left : 5px;
+}
+
 .label-bg {
   background: #ccc;
   width: 100%;
