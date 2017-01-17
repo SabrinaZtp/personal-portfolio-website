@@ -12,7 +12,7 @@
 
     <md-dialog-content>
       <div class="md-dialog-content font_raleway">
-        <img ng-repeat="pimgsrc in projectImgsrc" src="{{pimgsrc}}" width="100%" alt="{{pimgsrc}}">
+        <img ng-repeat="pimgsrc in projectImgsrc" ng-src="{{pimgsrc}}" width="100%" alt="{{pimgsrc}}">
         <h3 ng-bind="projectTitle"></h3>
         <ul>
           <li ng-repeat="ptask in projectTask" ng-bind="ptask"></li>

@@ -3,27 +3,37 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
   //** Array of project title
   var projectTitleObj = {
     "dailyqa" : "Web Application for Linac Machine QA",
-    "psqa" : "Web Application for Treatment Plan QA"
+    "psqa" : "Web Application for Treatment Plan QA",
+    "txdown" : "Web Page for Treatment Machine Downtime Summary"
   }
   $scope.projectTitleObj = projectTitleObj;
+
+  //** Array of project category
+  var projectCategoryObj = {
+    "dailyqa" : "Web App",
+    "psqa" : "Web App",
+    "txdown" : "Web App"
+  }
+  $scope.projectCategoryObj = projectCategoryObj;
 
   //** Array of project image url
   var projectImgRoot = "img/";
   var projectImgsrcObj = {
     "dailyqa" : [projectImgRoot+"Daily_QA_dataentry1_1.png", projectImgRoot+"Daily_QA_dataentry1_2.png"],
-    "psqa" : [projectImgRoot+"Daily_QA_dataentry1_1.png", projectImgRoot+"Daily_QA_dataentry1_2.png"]
+    "psqa" : [projectImgRoot+"Daily_QA_dataentry1_1.png", projectImgRoot+"Daily_QA_dataentry1_2.png"],
+    "txdown" : [projectImgRoot+"Daily_QA_dataentry1_1.png", projectImgRoot+"Daily_QA_dataentry1_2.png"]
   }
   $scope.projectImgsrcObj = projectImgsrcObj;
 
   //** Array of project technologies
   var projectSkillObj = {
-    "dailyqa" : ["HTML", "CSS", "AngularJS", "Java"],
-    "psqa" : ["HTML", "CSS", "jQuery", "PHP"]
+    "dailyqa" : ["HTML", "CSS", "AngularJS", "Java", "SQL"],
+    "psqa" : ["HTML", "CSS", "jQuery", "PHP", "SQL"],
+    "txdown" : ["HTML", "JavaScript", "SQL"]
   }
   $scope.projectSkillObj = projectSkillObj;
 
   $scope.showProjectDetail = function(projectName, ev){
-    console.log(projectName);
     $mdDialog.show({
       controller: DialogController,
       locals: {
@@ -46,7 +56,6 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
     };
 
     $scope.projectImgsrc = projectImgsrcObj[projectName];
-    console.log($scope.projectImgsrc);
 
     $scope.projectTitle = projectTitleObj[projectName];
 
@@ -58,6 +67,15 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
         "Develop data review page by using AJAX, which efficiently loads from the server without page refreshing.",
         "Redesign the outdated Daily QA software to a modern cross-device web application, by utilizing responsive web design, which brings optimal viewing and interactions.",
         "Launch front-end by using HTML, CSS and Bootstrap, which enables appealing UI on various devices."
+      ],
+      "psqa" : [
+        "Design and implement front and back-end code and SQL database of the web application which accelerates much of the QA process, by using HTML, CSS, PHP, JQuery, JavaScript and JSON. ",
+        "Visualize application-collected data by using JavaScript and PHP, which helps with tracking trends and leads up to faster patient-care decisions.",
+        "Install and configure Apache and Tomcat server and Microsoft SQL database driver, which ensure a robust platform for the web application."
+      ],
+      "txdown" : [
+        "Design, develop and maintain the website by using JavaScript, ASP and VBScript which generates hard data to share with manufacturers.",
+        "Build Microsoft Access database, refresh table structure according to application development."
       ]
     }
     $scope.projectTask = projectTaskObj[projectName];

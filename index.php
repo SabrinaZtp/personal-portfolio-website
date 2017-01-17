@@ -89,12 +89,15 @@
           </div>
           <!-- Gallary -->
           <div ng-repeat="(tKey, tValue) in projectTitleObj track by $index">
-            <div class="row">
+            <!-- <div class="row" ng-if="$index%2==0"> -->
               <!-- Image -->
-              <div class="col-sm-offset-2 col-sm-4">
+              <div class="col-sm-4" ng-class="{'col-sm-offset-2':$index%2==0}">
+                <p class="text-right">
+                  <span class="label label-default" ng-bind="projectCategoryObj[tKey]"></span>
+                </p>
                 <div class="projectImgWrapper">
                   <a ng-click="showProjectDetail(tKey, $event)">
-                    <img class="projectImage" src="{{projectImgsrcObj[tKey][0]}}" width="100%" alt="Daily QA Web App" />
+                    <img class="projectImage" ng-src="{{projectImgsrcObj[tKey][0]}}" width="100%" alt="Daily QA Web App" />
                   </a>
                   <div class="imgLabel">
                     <div class="imgLabel-text">
@@ -106,8 +109,11 @@
                     <div class="label-bg"></div>
                   </div>
                 </div>
+                <div>
+                  <br><br>
+                </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
         <div class="section">Some section</div>
