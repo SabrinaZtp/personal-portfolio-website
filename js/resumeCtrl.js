@@ -44,19 +44,15 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
       templateUrl: 'projectDetailTmpl.html',
       parent: angular.element(document.body),
       targetEvent: ev,
-      clickOutsideToClose:true
+      clickOutsideToClose: true
     });
 
   }  //** end showProjectDetail()
 
   //** Controller of dialog
   function DialogController($scope, $mdDialog, projectName, projectImgsrcObj, projectTitleObj) {
-    $scope.cancel = function() {
-      $mdDialog.cancel();
-    };
 
     $scope.projectImgsrc = projectImgsrcObj[projectName];
-
     $scope.projectTitle = projectTitleObj[projectName];
 
     //** Array of project tasks
@@ -79,6 +75,27 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
       ]
     }
     $scope.projectTask = projectTaskObj[projectName];
+
+    //** functions used in projectDetailTmpl
+    $scope.showImage = function(pimgsrc, ev){
+      $mdDialog.show({
+        template:
+          '<md-dialog aria-label="Project details">'
+            +'<md-dialog-content>'
+              +'<div class="md-dialog-content font_raleway">'
+                +'<img ng-src="'+pimgsrc+'" width="100%" alt="">'
+              +'</div>'
+            +'</md-dialog-content>'
+          +'</md-dialog>',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true
+      });
+    }
+
+    $scope.cancel = function() {
+      $mdDialog.cancel();
+    };
 
   }
 
