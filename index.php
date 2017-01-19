@@ -18,6 +18,9 @@
     <!-- Portfolio styles -->
     <link rel="stylesheet" href="portfolioStyles.css">
 
+    <!-- Themify icons -->
+    <link rel="stylesheet" href="resources/themify-icons/themify-icons.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -116,7 +119,32 @@
             <!-- </div> -->
           </div>
         </div>
-        <div class="section">Some section</div>
+
+        <!-- Section #4 -->
+        <div class="section">
+          <div class="row text-center">
+            <h2><b><span class="section_heading font_raleway text_transform_uppercase">
+              Professional Experience
+            </span></b></h2>
+          </div>
+          <div class="col-sm-offset-2 col-sm-8">
+            <ul class="resume-list font_raleway">
+              <li><h2><span class="ti-clipboard"></span><h2></li>
+              <li>
+                <b>Henry Ford Health System</b>&nbsp;&nbsp;<i>2014.11-Present</i>
+                <p>
+                  Contribute as the main developer through the full lifecycle of software development.
+                  Effectively handle multiple projects and tasks, which convince excellent time management and planning skills.
+                </p>
+                <p>
+                  Develop both front- and back-end of web applications.
+                  Proudly produce cross-browser compliant and user friendly web applications
+                  by using JavaScript, JQuery, AngularJS, HTML, CSS, PHP, AJAX and JSON.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
     </div>
 
     <!------------ JavaScript Resources ------------>

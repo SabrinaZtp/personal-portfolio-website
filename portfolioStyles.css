@@ -115,3 +115,19 @@ a, a:hover {
   top: 0px;
   left: 0px;
 }
+
+/* Resume list */
+.resume-list li {
+  list-style: none;
+}
+
+.resume-list li b {
+  font-size: 21px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.resume-list li p {
+  padding-left: 20px;
+}
