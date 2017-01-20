@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="resources/jquery.pagepiling.css" />
     <!-- Google font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <!-- Portfolio styles -->
     <link rel="stylesheet" href="portfolioStyles.css">
 
@@ -127,20 +128,32 @@
               Professional Experience
             </span></b></h2>
           </div>
+          <div>
+            <br><br>
+          </div>
           <div class="col-sm-offset-2 col-sm-8">
-            <ul class="resume-list font_raleway">
+            <ul class="resume-list">
               <li><h2><span class="ti-clipboard"></span><h2></li>
               <li>
-                <b>Henry Ford Health System</b>&nbsp;&nbsp;<i>2014.11-Present</i>
-                <p>
-                  Contribute as the main developer through the full lifecycle of software development.
-                  Effectively handle multiple projects and tasks, which convince excellent time management and planning skills.
-                </p>
-                <p>
-                  Develop both front- and back-end of web applications.
-                  Proudly produce cross-browser compliant and user friendly web applications
-                  by using JavaScript, JQuery, AngularJS, HTML, CSS, PHP, AJAX and JSON.
-                </p>
+                <div>
+                  <h2>Programmer Analyst</h2>
+                  <h4><i>Henry Ford Health System<i></h4>
+                    <span class="time_range">
+                      <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
+                    </span>
+                </div>
+                <div>
+                  <br>
+                  <p>
+                    Contribute as the main developer through the full lifecycle of software development.
+                    Effectively handle multiple projects and tasks, which convince excellent time management and planning skills.
+                  </p>
+                  <p>
+                    Develop both front- and back-end of web applications.
+                    Proudly produce cross-browser compliant and user friendly web applications
+                    by using JavaScript, JQuery, AngularJS, HTML, CSS, PHP, AJAX and JSON.
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
