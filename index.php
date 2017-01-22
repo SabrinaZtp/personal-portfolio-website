@@ -123,7 +123,7 @@
 
         <!-- Section #4 -->
         <div class="section">
-          <div class="row text-center">
+          <div class="row col-sm-offset-2 col-sm-8 text-center">
             <h2><b><span class="section_heading font_raleway text_transform_uppercase">
               Professional Experience
             </span></b></h2>
@@ -131,24 +131,27 @@
           <div>
             <br><br>
           </div>
-          <div class="col-sm-offset-2 col-sm-8">
+          <div class="col-sm-offset-2 col-sm-8 text-left">
             <ul class="resume-list">
+              <!-- Programmer -->
               <li><h2><span class="ti-clipboard"></span><h2></li>
-              <li>
+              <li class="resume-title" ng-click="programmerHiddenOrNot=!programmerHiddenOrNot">
                 <div>
                   <h2>Programmer Analyst</h2>
                   <h4><i>Henry Ford Health System<i></h4>
-                    <span class="time_range">
-                      <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
-                    </span>
+                  <span class="time_range">
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
+                  </span>
                 </div>
+              </li>
+              <li ng-hide="programmerHiddenOrNot">
                 <div>
                   <br>
-                  <p>
+                  <p style="border-left: 2px solid #FFF">
                     Contribute as the main developer through the full lifecycle of software development.
                     Effectively handle multiple projects and tasks, which convince excellent time management and planning skills.
                   </p>
-                  <p>
+                  <p style="border-left: 2px solid #FFF">
                     Develop both front- and back-end of web applications.
                     Proudly produce cross-browser compliant and user friendly web applications
                     by using JavaScript, JQuery, AngularJS, HTML, CSS, PHP, AJAX and JSON.

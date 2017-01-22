@@ -1,5 +1,8 @@
 portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
 
+  $scope.programmerHiddenOrNot = true;
+  $scope.internHiddenOrNot = true;
+
   //** Array of project title
   var projectTitleObj = {
     "dailyqa" : "Web Application for Linac Machine QA",
