@@ -84,7 +84,7 @@
         </div>
 
         <!-- Section #3 -->
-        <div class="section">
+        <div class="section pp-scrollable">
           <div class="row text-center">
             <h2><b><span class="section_heading font_raleway text_transform_uppercase">Projects</span></b></h2>
           </div>
@@ -134,11 +134,12 @@
           <div class="col-sm-offset-2 col-sm-8 text-left">
             <ul class="resume-list">
               <!-- Programmer -->
+              <br>
               <li><h2><span class="ti-clipboard"></span><h2></li>
               <li class="resume-title" ng-click="programmerHiddenOrNot=!programmerHiddenOrNot">
                 <div>
                   <h2>Programmer Analyst</h2>
-                  <h4><i>Henry Ford Health System<i></h4>
+                  <h4><i>Henry Ford Health System</i></h4>
                   <span class="time_range">
                     <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
                   </span>
@@ -156,6 +157,28 @@
                     Proudly produce cross-browser compliant and user friendly web applications
                     by using JavaScript, JQuery, AngularJS, HTML, CSS, PHP, AJAX and JSON.
                   </p>
+                </div>
+              </li>
+              <!-- Intern -->
+              <br>
+              <li><h2><span class="ti-mouse-alt"></span><h2></li>
+              <li class="resume-title" ng-click="internHiddenOrNot=!internHiddenOrNot">
+                <div>
+                  <h2>Programmer Intern</h2>
+                  <h4><i>Henry Ford Health System</i></h4>
+                  <span class="time_range">
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
+                  </span>
+                </div>
+              </li>
+              <li ng-hide="internHiddenOrNot">
+                <div>
+                  <br>
+                  <p style="border-left: 2px solid #FFF">
+                    Developed programs to extract and transform data from clinical systems to MS SQL database,
+                    by using C# and SQL, which enlarged the medical research data warehouse by 10,000+ patients\’ records.
+                  </p>
+                  <br><br>
                 </div>
               </li>
             </ul>

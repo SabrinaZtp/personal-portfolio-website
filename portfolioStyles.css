@@ -1,6 +1,7 @@
 /* Override section class */
 .section {
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 /* Anchor */
