@@ -127,7 +127,7 @@ a, a:hover {
   list-style: none;
 }
 
-.resume-list h2, .resume-list h4 {
+.resume-list h2, .resume-list h3, .resume-list h4, .resume-list h5 {
   font-family: 'Raleway', sans-serif;
   color: #E8F1F2;
   margin-bottom: 20px;

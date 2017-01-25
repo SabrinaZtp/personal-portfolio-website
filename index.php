@@ -93,31 +93,29 @@
           </div>
           <!-- Gallary -->
           <div ng-repeat="(tKey, tValue) in projectTitleObj track by $index">
-            <!-- <div class="row" ng-if="$index%2==0"> -->
-              <!-- Image -->
-              <div class="col-sm-4" ng-class="{'col-sm-offset-2':$index%2==0}">
-                <p class="text-right">
-                  <span class="label label-default" ng-bind="projectCategoryObj[tKey]"></span>
-                </p>
-                <div class="projectImgWrapper">
-                  <a ng-click="showProjectDetail(tKey, $event)">
-                    <img class="projectImage" ng-src="{{projectImgsrcObj[tKey][0]}}" width="100%" alt="Daily QA Web App" />
-                  </a>
-                  <div class="imgLabel">
-                    <div class="imgLabel-text">
-                      <a class="text-title" ng-bind="tValue"></a>
-                      <p class="text-category">
-                        <span ng-repeat="skill in projectSkillObj[tKey]" ng-bind="skill"></span>
-                      </p>
-                    </div>
-                    <div class="label-bg"></div>
+            <!-- Image -->
+            <div class="col-sm-4" ng-class="{'col-sm-offset-2':$index%2==0}">
+              <p class="text-right">
+                <span class="label label-default" ng-bind="projectCategoryObj[tKey]"></span>
+              </p>
+              <div class="projectImgWrapper">
+                <a ng-click="showProjectDetail(tKey, $event)">
+                  <img class="projectImage" ng-src="{{projectImgsrcObj[tKey][0]}}" width="100%" alt="Daily QA Web App" />
+                </a>
+                <div class="imgLabel">
+                  <div class="imgLabel-text">
+                    <a class="text-title" ng-bind="tValue"></a>
+                    <p class="text-category">
+                      <span ng-repeat="skill in projectSkillObj[tKey]" ng-bind="skill"></span>
+                    </p>
                   </div>
-                </div>
-                <div>
-                  <br><br>
+                  <div class="label-bg"></div>
                 </div>
               </div>
-            <!-- </div> -->
+              <div>
+                <br><br>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -132,14 +130,14 @@
             <br><br>
           </div>
           <div class="col-sm-offset-2 col-sm-8 text-left">
-            <ul class="resume-list">
+            <ul class="resume-list col-sm-offset-1 col-sm-9">
               <!-- Programmer -->
               <br>
               <li><h2><span class="ti-clipboard"></span><h2></li>
               <li class="resume-title" ng-click="programmerHiddenOrNot=!programmerHiddenOrNot">
                 <div>
-                  <h2>Programmer Analyst</h2>
-                  <h4><i>Henry Ford Health System</i></h4>
+                  <h3>Programmer Analyst</h3>
+                  <h5><i>Henry Ford Health System</i></h5>
                   <span class="time_range">
                     <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
                   </span>
@@ -164,10 +162,10 @@
               <li><h2><span class="ti-mouse-alt"></span><h2></li>
               <li class="resume-title" ng-click="internHiddenOrNot=!internHiddenOrNot">
                 <div>
-                  <h2>Programmer Intern</h2>
-                  <h4><i>Henry Ford Health System</i></h4>
+                  <h3>Programmer Intern</h3>
+                  <h5><i>Henry Ford Health System</i></h5>
                   <span class="time_range">
-                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.4-2014.8</i>
                   </span>
                 </div>
               </li>
@@ -176,9 +174,48 @@
                   <br>
                   <p style="border-left: 2px solid #FFF">
                     Developed programs to extract and transform data from clinical systems to MS SQL database,
-                    by using C# and SQL, which enlarged the medical research data warehouse by 10,000+ patients\’ records.
+                    by using C# and SQL, which enlarged the medical research data warehouse by 10,000+ patients’ records.
                   </p>
                   <br><br>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>  <!-- end section #4 -->
+
+        <!-- Section #5 -->
+        <div class="section">
+          <div class="row col-sm-offset-2 col-sm-8 text-center">
+            <h2><b><span class="section_heading font_raleway text_transform_uppercase">
+              Education
+            </span></b></h2>
+          </div>
+          <div>
+            <br><br>
+          </div>
+          <div class="col-sm-offset-2 col-sm-8 text-left">
+            <ul class="resume-list col-sm-offset-1 col-sm-9">
+              <!-- UB -->
+              <br>
+              <li><h2><span class="ti-bookmark-alt"></span><h2></li>
+              <li class="resume-title">
+                <div>
+                  <h3>University at Buffalo, The State University of New York</h3>
+                  <h4><i>Master of Science in </i><b>Management Information Systems</b></h4>
+                  <span class="time_range">
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2013.8-2014.9</i>
+                  </span>
+                </div>
+              </li>
+              <!-- BUPT -->
+              <br>
+              <li class="resume-title">
+                <div>
+                  <h3>Beijing University of Posts and Telecommunications</h3>
+                  <h4><i>Bachelor of Science in </i><b>E-Commerce Engineering with Law</b></h4>
+                  <span class="time_range">
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2009.9-2013.6</i>
+                  </span>
                 </div>
               </li>
             </ul>
