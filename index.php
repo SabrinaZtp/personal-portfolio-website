@@ -73,10 +73,15 @@
             <div class="tag">HTML</div><div class="tag opacity_0p75">CSS</div>
           </div>
           <div class="row text-center">
-            <div class="tag">AngularJS</div><div class="tag">jQuery</div><div class="tag opacity_0p75">JavaScript</div>
+            <div class="tag">AngularJS</div>
+            <div class="tag">jQuery</div>
+            <div class="tag">Bootstrap</div>
+            <div class="tag opacity_0p75">JavaScript</div>
           </div>
           <div class="row text-center">
-            <div class="tag">SQL</div>
+            <div class="tag">MySQL</div>
+            <div class="tag">MS SQL</div>
+            <div class="tag opacity_0p75">Firebird</div>
           </div>
           <div class="row text-center">
             <div class="tag opacity_0p75">Java</div><div class="tag opacity_0p5">PHP</div><div class="tag opacity_0p5">C#</div>

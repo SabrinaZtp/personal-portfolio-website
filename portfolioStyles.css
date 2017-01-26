@@ -54,10 +54,11 @@ a, a:hover {
   background-color: #247BA0;
   color: #E8F1F2;
   font-size: 1.17em;
+  font-family: 'Raleway', sans-serif;
   border-radius: 3px;
   display: inline-block;
-  padding: 2px 8px;
-  margin-right: 8px;
+  padding: 4px 10px;
+  margin-right: 15px;
   margin-bottom: 15px;
 }
 
