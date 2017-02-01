@@ -44,7 +44,7 @@
         <!-- Section #1 -->
         <div class="section">
           <div class="row padding_bottom_50px">
-            <img src="img/minion2.png"
+            <img src="img/portrait1_1.png"
               class="img-responsive center-block" alt="portrait" />
           </div>
           <div class="row text-center">
@@ -105,10 +105,10 @@
               </p>
               <div class="projectImgWrapper">
                 <a ng-click="showProjectDetail(tKey, $event)">
-                  <img class="projectImage" ng-src="{{projectImgsrcObj[tKey][0]}}" width="100%" alt="Daily QA Web App" />
+                  <img class="projectImage" ng-src="{{projectThumbsrcObj[tKey]}}" width="100%" alt="Daily QA Web App" />
                 </a>
                 <div class="imgLabel">
-                  <div class="imgLabel-text">
+                  <div class="imgLabel-text font_raleway">
                     <a class="text-title" ng-bind="tValue"></a>
                     <p class="text-category">
                       <span ng-repeat="skill in projectSkillObj[tKey]" ng-bind="skill"></span>

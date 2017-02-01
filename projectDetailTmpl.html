@@ -12,9 +12,12 @@
 
     <md-dialog-content>
       <div class="md-dialog-content font_raleway">
-        <img ng-repeat="pimgsrc in projectImgsrc" ng-src="{{pimgsrc}}" width="100%" alt="{{pimgsrc}}"
-          ng-click="showImage(pimgsrc, $event)">
-        <h3 ng-bind="projectTitle"></h3>
+        <div class="row">
+          <img class="col-sm-6" ng-repeat="pimgsrc in projectImgsrc" ng-src="{{pimgsrc}}" alt="{{pimgsrc}}"
+            ng-click="showImage(pimgsrc, $event)">
+
+        </div>
+        <h3 ng-bind="(projectCategory)+' for '+(projectTitle)"></h3>
         <ul>
           <li ng-repeat="ptask in projectTask" ng-bind="ptask"></li>
         </ul>
