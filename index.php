@@ -109,7 +109,7 @@
                 </a>
                 <div class="imgLabel">
                   <div class="imgLabel-text font_raleway">
-                    <a class="text-title" ng-bind="tValue"></a>
+                    <a class="text-title" ng-bind="tValue" ng-click="showProjectDetail(tKey, $event)"></a>
                     <p class="text-category">
                       <span ng-repeat="skill in projectSkillObj[tKey]" ng-bind="skill"></span>
                     </p>

@@ -15,9 +15,12 @@
         <div class="row">
           <img class="col-sm-6" ng-repeat="pimgsrc in projectImgsrc" ng-src="{{pimgsrc}}" alt="{{pimgsrc}}"
             ng-click="showImage(pimgsrc, $event)">
-
         </div>
         <h3 ng-bind="(projectCategory)+' for '+(projectTitle)"></h3>
+        <div ng-if="projectDemosrc!=''">
+          <span class="ti-share"></span>&nbsp;&nbsp;
+          <a ng-href="{{trustSrc(projectDemosrc[1])}}" ng-bind="'view on '+projectDemosrc[0]" target="_blank"></a>
+        </div>
         <ul>
           <li ng-repeat="ptask in projectTask" ng-bind="ptask"></li>
         </ul>

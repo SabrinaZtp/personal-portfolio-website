@@ -165,3 +165,9 @@ a, a:hover {
   background-color: #006494;
   transition: background-color 0.5s;
 }
+
+/* Override md-toolbar */
+md-toolbar:not(.md-menu-toolbar) {
+  background-color: inherit;
+  color: #CCC;
+}
