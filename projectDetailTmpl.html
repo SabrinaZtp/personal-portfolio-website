@@ -12,8 +12,9 @@
 
     <md-dialog-content>
       <div class="md-dialog-content font_raleway">
-        <div class="row">
-          <img class="col-sm-6" ng-repeat="pimgsrc in projectImgsrc" ng-src="{{pimgsrc}}" alt="{{pimgsrc}}"
+        <div ng-repeat="pimgsrc in projectImgsrc track by $index"
+        ng-class="{'row padding_bottom_20px':$index%2==1}">
+          <img class="col-sm-6" ng-src="{{pimgsrc}}" alt="{{pimgsrc}}"
             ng-click="showImage(pimgsrc, $event)">
         </div>
         <h3 ng-bind="(projectCategory)+' for '+(projectTitle)"></h3>

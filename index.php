@@ -32,17 +32,20 @@
   <body ng-app="portfolioApp" ng-controller="resumeCtrl" ng-clock>
 
     <!-- Language bar -->
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-sm-2 pull-right btn-group" role="group" aria-label="">
         <button type="button" class="btn btn-xs btn-primary">中</button>
         <button type="button" class="btn btn-xs btn-primary">En</button>
       </div>
-    </div>
+    </div> -->
 
     <!-- Main content -->
     <div id="pagepiling">
         <!-- Section #1 -->
         <div class="section">
+          <div class="ray ray1"></div>
+          <div class="ray ray2"></div>
+          <div class="ray ray3"></div>
           <div class="row padding_bottom_50px">
             <img src="img/portrait1_1.png"
               class="img-responsive center-block" alt="portrait" />
@@ -63,8 +66,11 @@
 
         <!-- Section #2 -->
         <div class="section">
-          <div class="row text-center">
-            <h2><b><span class="section_heading font_raleway text_transform_uppercase">Skills</span></b></h2>
+          <div class="ray ray1"></div>
+          <div class="ray ray2"></div>
+          <div class="ray ray3"></div>
+          <div class="row text-center section_heading">
+            <h2><b><span class="font_raleway text_transform_uppercase">Skills</span></b></h2>
           </div>
           <div class="row">
             <br><br>
@@ -90,8 +96,11 @@
 
         <!-- Section #3 -->
         <div class="section pp-scrollable">
-          <div class="row text-center">
-            <h2><b><span class="section_heading font_raleway text_transform_uppercase">Projects</span></b></h2>
+          <div class="ray ray1"></div>
+          <div class="ray ray2"></div>
+          <div class="ray ray3"></div>
+          <div class="row text-center section_heading">
+            <h2><b><span class="font_raleway text_transform_uppercase">Projects</span></b></h2>
           </div>
           <div class="row">
             <br><br>
@@ -99,7 +108,7 @@
           <!-- Gallary -->
           <div ng-repeat="(tKey, tValue) in projectTitleObj track by $index">
             <!-- Image -->
-            <div class="col-sm-4" ng-class="{'col-sm-offset-2':$index%2==0}">
+            <div class="col-sm-4 col-lg-3" ng-class="{'col-sm-offset-2 col-lg-offset-3':$index%2==0}">
               <p class="text-right">
                 <span class="label label-default" ng-bind="projectCategoryObj[tKey]"></span>
               </p>
@@ -126,9 +135,12 @@
 
         <!-- Section #4 -->
         <div class="section">
-          <div class="row col-sm-offset-2 col-sm-8 text-center">
-            <h2><b><span class="section_heading font_raleway text_transform_uppercase">
-              Professional Experience
+          <div class="ray ray1"></div>
+          <div class="ray ray2"></div>
+          <div class="ray ray3"></div>
+          <div class="row section_heading col-sm-offset-2 col-sm-8 text-center">
+            <h2><b><span class="font_raleway text_transform_uppercase">
+              Experiences
             </span></b></h2>
           </div>
           <div>
@@ -149,16 +161,29 @@
                 </div>
               </li>
               <li ng-hide="programmerHiddenOrNot">
-                <div>
+                <div class="resume-content">
                   <br>
-                  <p style="border-left: 2px solid #FFF">
+                  <p>
                     Contribute as the main developer through the full lifecycle of software development.
                     Effectively handle multiple projects and tasks, which convince excellent time management and planning skills.
                   </p>
-                  <p style="border-left: 2px solid #FFF">
+                  <p>
                     Develop both front- and back-end of web applications.
                     Proudly produce cross-browser compliant and user friendly web applications
                     by using JavaScript, JQuery, AngularJS, HTML, CSS, PHP, AJAX and JSON.
+                  </p>
+                  <p>
+                    Build and simultaneously maintain several relational databases, by using MSSQL and MySQL.
+                  </p>
+                  <p>
+                    Develop RESTful web services which provide seamless interfaces to access distributed resources
+                    from MSSQL and MySQL databases built on multiple servers.
+                  </p>
+                  <p>
+                    Configure web servers and ensure the high performance of websites.
+                  </p>
+                  <p>
+                    Work closely with users to ensure issues being responded to in a timely manner.
                   </p>
                 </div>
               </li>
@@ -190,8 +215,11 @@
 
         <!-- Section #5 -->
         <div class="section">
-          <div class="row col-sm-offset-2 col-sm-8 text-center">
-            <h2><b><span class="section_heading font_raleway text_transform_uppercase">
+          <div class="ray ray1"></div>
+          <div class="ray ray2"></div>
+          <div class="ray ray3"></div>
+          <div class="row section_heading col-sm-offset-2 col-sm-8 text-center">
+            <h2><b><span class="font_raleway text_transform_uppercase">
               Education
             </span></b></h2>
           </div>
