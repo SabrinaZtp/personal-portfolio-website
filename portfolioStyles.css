@@ -9,14 +9,23 @@ a, a:hover {
    text-decoration: none;
 }
 
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
 /* Get rid of the focus highlight */
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 /* Color */
 .color_anti_flash_white {
   color: #E8F1F2;
+}
+
+.color_white {
+  color: #FFF;
 }
 
 /* Font */
@@ -37,6 +46,10 @@ a, a:hover {
   font-size: 24px;
 }
 
+.font_size_20px {
+  font-size: 20px;
+}
+
 /* Text transform */
 .text_transform_uppercase {
   text-transform: uppercase;
@@ -51,12 +64,11 @@ a, a:hover {
   padding-bottom: 20px;
 }
 
+.padding_bottom_80px {
+  padding-bottom: 80px;
+}
+
 /* Heading of section */
-/*.section_heading {
-  border: 4px solid #E8F1F2;
-  padding: 5px 20px;
-  color: #E8F1F2;
-}*/
 .section_heading span{
   border: 4px solid #FFF;
   padding: 5px 20px;
@@ -215,7 +227,7 @@ md-toolbar:not(.md-menu-toolbar) {
 }
 
 /* Shape of right parallelogram */
-.ray {
+.ray-top {
   width: 560px;
   height: 500px;
   position: absolute;
@@ -234,15 +246,12 @@ md-toolbar:not(.md-menu-toolbar) {
 
 .ray1 {
   margin: 0 0 0 126px;
-  /*background: #CCC;*/
 }
 
 .ray2 {
   margin: 0 0 0 30px;
-  /*background: black;*/
 }
 
 .ray3 {
   margin: 0 0 0 -190px;
-  /*background: #FFF;*/
 }

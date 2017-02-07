@@ -43,21 +43,21 @@
     <div id="pagepiling">
         <!-- Section #1 -->
         <div class="section">
-          <div class="ray ray1"></div>
-          <div class="ray ray2"></div>
-          <div class="ray ray3"></div>
+          <div class="ray-top ray1"></div>
+          <div class="ray-top ray2"></div>
+          <div class="ray-top ray3"></div>
           <div class="row padding_bottom_50px">
             <img src="img/portrait1_1.png"
               class="img-responsive center-block" alt="portrait" />
           </div>
           <div class="row text-center">
-            <p class="en color_anti_flash_white font_raleway font_size_50px">
+            <p class="en color_white font_raleway font_size_50px">
               <b>Sabrina Zhai</b>
             </p>
           </div>
           <div class="row">
             <div class="col-sm-offset-3 col-sm-6 text-center">
-              <p class="en color_anti_flash_white font_raleway font_size_24px text_transform_uppercase">
+              <p class="en color_white font_raleway font_size_24px text_transform_uppercase">
                 Web Application Developer
               </p>
             </div>
@@ -66,14 +66,11 @@
 
         <!-- Section #2 -->
         <div class="section">
-          <div class="ray ray1"></div>
-          <div class="ray ray2"></div>
-          <div class="ray ray3"></div>
-          <div class="row text-center section_heading">
+          <div class="ray-top ray1"></div>
+          <div class="ray-top ray2"></div>
+          <div class="ray-top ray3"></div>
+          <div class="row text-center section_heading padding_bottom_80px">
             <h2><b><span class="font_raleway text_transform_uppercase">Skills</span></b></h2>
-          </div>
-          <div class="row">
-            <br><br>
           </div>
           <div class="row text-center">
             <div class="tag">HTML</div><div class="tag opacity_0p75">CSS</div>
@@ -96,9 +93,9 @@
 
         <!-- Section #3 -->
         <div class="section pp-scrollable">
-          <div class="ray ray1"></div>
-          <div class="ray ray2"></div>
-          <div class="ray ray3"></div>
+          <div class="ray-top ray1"></div>
+          <div class="ray-top ray2"></div>
+          <div class="ray-top ray3"></div>
           <div class="row text-center section_heading">
             <h2><b><span class="font_raleway text_transform_uppercase">Projects</span></b></h2>
           </div>
@@ -135,9 +132,9 @@
 
         <!-- Section #4 -->
         <div class="section">
-          <div class="ray ray1"></div>
-          <div class="ray ray2"></div>
-          <div class="ray ray3"></div>
+          <div class="ray-top ray1"></div>
+          <div class="ray-top ray2"></div>
+          <div class="ray-top ray3"></div>
           <div class="row section_heading col-sm-offset-2 col-sm-8 text-center">
             <h2><b><span class="font_raleway text_transform_uppercase">
               Experiences
@@ -147,7 +144,7 @@
             <br><br>
           </div>
           <div class="col-sm-offset-2 col-sm-8 text-left">
-            <ul class="resume-list col-sm-offset-1 col-sm-9">
+            <ul class="resume-list col-sm-offset-1 col-sm-10">
               <!-- Programmer -->
               <br>
               <li><h2><span class="ti-clipboard"></span><h2></li>
@@ -215,9 +212,9 @@
 
         <!-- Section #5 -->
         <div class="section">
-          <div class="ray ray1"></div>
-          <div class="ray ray2"></div>
-          <div class="ray ray3"></div>
+          <div class="ray-top ray1"></div>
+          <div class="ray-top ray2"></div>
+          <div class="ray-top ray3"></div>
           <div class="row section_heading col-sm-offset-2 col-sm-8 text-center">
             <h2><b><span class="font_raleway text_transform_uppercase">
               Education
@@ -227,7 +224,7 @@
             <br><br>
           </div>
           <div class="col-sm-offset-2 col-sm-8 text-left">
-            <ul class="resume-list col-sm-offset-1 col-sm-9">
+            <ul class="resume-list col-sm-offset-1 col-sm-10">
               <!-- UB -->
               <br>
               <li><h2><span class="ti-bookmark-alt"></span><h2></li>
@@ -252,6 +249,52 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <!-- Section #6 -->
+        <div class="section">
+          <div class="ray-top ray1"></div>
+          <div class="ray-top ray2"></div>
+          <div class="ray-top ray3"></div>
+          <div class="row section_heading col-sm-offset-2 col-sm-8 text-center padding_bottom_80px">
+            <h2><b><span class="font_raleway text_transform_uppercase">
+              Contact
+            </span></b></h2>
+          </div>
+          <div>
+            <br><br>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-3 col-sm-6 text-center">
+              <p class="en color_anti_flash_white font_raleway font_size_20px">
+                <a href="mailto:zhaitongpei@hotmail.com" class="color_anti_flash_white">
+                  <span class="ti-email"></span>&nbsp;&nbsp;Email: zhaitongpei@hotmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-3 col-sm-6 text-center">
+              <p class="en color_anti_flash_white font_raleway font_size_20px">
+                <a href="resume/resume_tongpei.pdf" class="color_anti_flash_white" target="_blank">
+                  <span class="ti-clipboard"></span>&nbsp;&nbsp;Download Resume
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-offset-3 col-sm-6 text-center">
+              <p class="en color_anti_flash_white font_raleway font_size_24px">
+                <a href="https://github.com/SabrinaZtp" target="_blank">
+                  <span class="ti-github color_anti_flash_white"></span>
+                </a>
+                &nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/tongpei-zhai-827a2a7a" target="_blank">
+                  <span class="ti-linkedin color_anti_flash_white"></span>
+                </a>
+              </p>
+            </div>
           </div>
         </div>
     </div>
