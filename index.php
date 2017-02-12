@@ -32,12 +32,14 @@
   <body ng-app="portfolioApp" ng-controller="resumeCtrl" ng-clock>
 
     <!-- Language bar -->
-    <!-- <div class="row">
+    <div class="row langBar">
       <div class="col-sm-2 pull-right btn-group" role="group" aria-label="">
-        <button type="button" class="btn btn-xs btn-primary">中</button>
-        <button type="button" class="btn btn-xs btn-primary">En</button>
+        <button type="button" class="btn btn-xs btn-info" ng-class="langObj.en.isActive?'active':''"
+        ng-bind="langObj.en.langText" ng-click="onLangChange(langObj.en.langName)"></button>
+        <button type="button" class="btn btn-xs btn-info" ng-class="langObj.ch.isActive?'active':''"
+        ng-bind="langObj.ch.langText" ng-click="onLangChange(langObj.ch.langName)"></button>
       </div>
-    </div> -->
+    </div>
 
     <!-- Main content -->
     <div id="pagepiling">
@@ -52,14 +54,13 @@
           </div>
           <div class="row text-center">
             <p class="en color_white font_raleway font_size_50px">
-              <b>Sabrina Zhai</b>
+              <b ng-bind="dvlpNameObj.dvlpName"></b>
             </p>
           </div>
           <div class="row">
             <div class="col-sm-offset-3 col-sm-6 text-center">
-              <p class="en color_white font_raleway font_size_24px text_transform_uppercase">
-                Web Application Developer
-              </p>
+              <p class="en color_white font_raleway font_size_24px text_transform_uppercase"
+              ng-bind="jobTitleObj.jobTitle"></p>
             </div>
           </div>
         </div>

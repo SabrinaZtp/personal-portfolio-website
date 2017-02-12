@@ -1,7 +1,37 @@
-portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
+portfolioApp.controller('resumeCtrl', function($scope, $mdDialog, langService){
 
   $scope.programmerHiddenOrNot = true;
   $scope.internHiddenOrNot = true;
+  $scope.langService = langService;
+
+  //** Array for language
+  var langObj = {
+    "en" : { "langText" : "En", "langName" : "en", "isActive" : true },
+    "ch" : { "langText" : "中", "langName" : "ch", "isActive" : false }
+  }
+  $scope.langObj = langObj;
+
+  //** Array of developer's name
+  var dvlpNameObj = {
+    "en" : {"dvlpName" : "Sabrina Zhai"},
+    "ch" : {"dvlpName" : "翟彤培"}
+  }
+  $scope.$watch('langService.getLang()',
+  function(newVal, oldVal){
+    var lang = $scope.langService.getLang();
+    $scope.dvlpNameObj = dvlpNameObj[lang];
+  }, true);
+
+  //** Array of job text-title
+var jobTitleObj = {
+  "en" : {"jobTitle" : "Web Application Developer"},
+  "ch" : {"jobTitle" : "网络工程师"}
+}
+$scope.$watch('langService.getLang()',
+function(newVal, oldVal){
+  var lang = $scope.langService.getLang();
+  $scope.jobTitleObj = jobTitleObj[lang];
+}, true);
 
   //** Array of project title
   var projectTitleObj = {
@@ -54,6 +84,15 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
     "numberSort" : ["HTML", "CSS", "AngularJS"]
   }
   $scope.projectSkillObj = projectSkillObj;
+
+  $scope.onLangChange = function(langName){
+    //** toggle class 'active'
+    for(langIdx in $scope.langObj){
+      $scope.langObj[langIdx].isActive = !$scope.langObj[langIdx].isActive;
+      console.log(langIdx+ " " +$scope.langObj[langIdx].isActive);
+    }
+    langService.setLang(langName);
+  }
 
   $scope.showProjectDetail = function(projectName, ev){
     $mdDialog.show({
