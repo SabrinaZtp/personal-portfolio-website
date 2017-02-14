@@ -1,27 +1,72 @@
-portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
+portfolioApp.controller('resumeCtrl', function($scope, $mdDialog, langService){
 
   $scope.programmerHiddenOrNot = true;
   $scope.internHiddenOrNot = true;
+  $scope.langService = langService;
+
+  //** Array for language
+  var langObj = {
+    "en" : { "langText" : "En", "langName" : "en", "isActive" : true },
+    "ch" : { "langText" : "中", "langName" : "ch", "isActive" : false }
+  }
+  $scope.langObj = langObj;
+
+  //** Array of developer's name
+  var dvlpNameObj = {
+    "en" : {"dvlpName" : "Sabrina Zhai"},
+    "ch" : {"dvlpName" : "翟彤培"}
+  }
+
+  //** Array of job text-title
+  var jobTitleObj = {
+    "en" : {"jobTitle" : "Web Application Developer"},
+    "ch" : {"jobTitle" : "网络工程师"}
+  }
 
   //** Array of project title
   var projectTitleObj = {
-    "dailyqa" : "Linac Machine QA",
-    "psqa" : "Treatment Plan QA",
-    "txdown" : "Machine Downtime Summary",
-    "reportExtract" : "Report Data Extraction",
-    "numberSort" : "Number Sorting"
+    "en" : {
+      "dailyqa" : "Linac Machine QA",
+      "psqa" : "Treatment Plan QA",
+      "txdown" : "Machine Downtime Summary",
+      "reportExtract" : "Report Data Extraction",
+      "numberSort" : "Number Sorting"
+    },
+    "ch" : {
+      "dailyqa" : "放射治疗设备QA",
+      "psqa" : "治疗计划QA",
+      "txdown" : "治疗设备故障时间概览",
+      "reportExtract" : "医疗报告数据提取",
+      "numberSort" : "数字排序"
+    }
   }
-  $scope.projectTitleObj = projectTitleObj;
 
   //** Array of project category
   var projectCategoryObj = {
-    "dailyqa" : "Web Application",
-    "psqa" : "Web Application",
-    "txdown" : "Web Application",
-    "reportExtract" : "Code Widget",
-    "numberSort" : "Code Widget"
+    "en" : {
+      "dailyqa" : "Web Application",
+      "psqa" : "Web Application",
+      "txdown" : "Web Application",
+      "reportExtract" : "Code Widget",
+      "numberSort" : "Code Widget"
+    },
+    "ch" : {
+      "dailyqa" : "网络应用",
+      "psqa" : "网络应用",
+      "txdown" : "网络应用",
+      "reportExtract" : "小原件",
+      "numberSort" : "小原件"
+    }
   }
-  $scope.projectCategoryObj = projectCategoryObj;
+
+  $scope.$watch('langService.getLang()',
+  function(newVal, oldVal){
+    var lang = $scope.langService.getLang();
+    $scope.dvlpNameObj = dvlpNameObj[lang];
+    $scope.jobTitleObj = jobTitleObj[lang];
+    $scope.projectTitleObj = projectTitleObj[lang];
+    $scope.projectCategoryObj = projectCategoryObj[lang];
+  }, true);
 
   //** Array of project thumbnail url
   var projectImgRoot = "img/";
@@ -55,6 +100,15 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
   }
   $scope.projectSkillObj = projectSkillObj;
 
+  $scope.onLangChange = function(langName){
+    //** toggle class 'active'
+    for(langIdx in $scope.langObj){
+      $scope.langObj[langIdx].isActive = !$scope.langObj[langIdx].isActive;
+      console.log(langIdx+ " " +$scope.langObj[langIdx].isActive);
+    }
+    langService.setLang(langName);
+  }
+
   $scope.showProjectDetail = function(projectName, ev){
     $mdDialog.show({
       controller: DialogController,
@@ -73,12 +127,22 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
   }  //** end showProjectDetail()
 
   //** Controller of dialog
-  function DialogController($scope, $mdDialog, projectName,
+  function DialogController($scope, $mdDialog, $sce, projectName,
     projectCategoryObj, projectImgsrcObj, projectTitleObj) {
 
     $scope.projectImgsrc = projectImgsrcObj[projectName];
     $scope.projectCategory = projectCategoryObj[projectName];
     $scope.projectTitle = projectTitleObj[projectName];
+
+    //** Array of project urls
+    var projectDemosrcObj = {
+      "dailyqa" : "",
+      "psqa" : "",
+      "txdown" : "",
+      "reportExtract" : ["GitHub", "https://github.com/SabrinaZtp/structured-report-data-extraction-web-app"],
+      "numberSort" : ["Codepen", "http://codepen.io/sabrina_tz/pen/YpGGPe"]
+    }
+    $scope.projectDemosrc = projectDemosrcObj[projectName];
 
     //** Array of project tasks
     var projectTaskObj = {
@@ -124,6 +188,11 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog){
         targetEvent: ev,
         clickOutsideToClose: true
       });
+    }
+
+    //** Make url links work
+    $scope.trustSrc = function(src) {
+      return $sce.trustAsResourceUrl(src);
     }
 
     $scope.cancel = function() {
