@@ -151,38 +151,19 @@
               <li><h2><span class="ti-clipboard"></span><h2></li>
               <li class="resume-title" ng-click="programmerHiddenOrNot=!programmerHiddenOrNot">
                 <div>
-                  <h3>Programmer Analyst</h3>
-                  <h5><i>Henry Ford Health System</i></h5>
+                  <h3 ng-bind="exprjobTitleObj.fulltimeTitle"></h3>
+                  <h5><i ng-bind="employerObj.employerName"></i></h5>
                   <span class="time_range">
-                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.11-Present</i>
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;
+                    <i class="font_raleway" ng-bind="exprjobTitleObj.fulltimeTimerange"></i>
                   </span>
                 </div>
               </li>
               <li ng-hide="programmerHiddenOrNot">
                 <div class="resume-content">
                   <br>
-                  <p>
-                    Contribute as the main developer through the full lifecycle of software development.
-                    Effectively handle multiple projects and tasks, which convince excellent time management and planning skills.
-                  </p>
-                  <p>
-                    Develop both front- and back-end of web applications.
-                    Proudly produce cross-browser compliant and user friendly web applications
-                    by using JavaScript, JQuery, AngularJS, HTML, CSS, PHP, AJAX and JSON.
-                  </p>
-                  <p>
-                    Build and simultaneously maintain several relational databases, by using MSSQL and MySQL.
-                  </p>
-                  <p>
-                    Develop RESTful web services which provide seamless interfaces to access distributed resources
-                    from MSSQL and MySQL databases built on multiple servers.
-                  </p>
-                  <p>
-                    Configure web servers and ensure the high performance of websites.
-                  </p>
-                  <p>
-                    Work closely with users to ensure issues being responded to in a timely manner.
-                  </p>
+                  <p class="font_raleway" ng-repeat="descLine in jobDescriptionObj.fulltimeJobDesc"
+                  ng-bind="descLine"></p>
                 </div>
               </li>
               <!-- Intern -->
@@ -190,20 +171,23 @@
               <li><h2><span class="ti-mouse-alt"></span><h2></li>
               <li class="resume-title" ng-click="internHiddenOrNot=!internHiddenOrNot">
                 <div>
-                  <h3>Programmer Intern</h3>
-                  <h5><i>Henry Ford Health System</i></h5>
+                  <h3 ng-bind="exprjobTitleObj.internTitle"></h3>
+                  <h5><i ng-bind="employerObj.employerName"></i></h5>
                   <span class="time_range">
-                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2014.4-2014.8</i>
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;
+                    <i class="font_raleway" ng-bind="exprjobTitleObj.internTimerange"></i>
                   </span>
                 </div>
               </li>
               <li ng-hide="internHiddenOrNot">
-                <div>
+                <div class="resume-content">
                   <br>
-                  <p style="border-left: 2px solid #FFF">
+                  <p class="font_raleway" ng-repeat="descLine in jobDescriptionObj.internJobDesc"
+                  ng-bind="descLine"></p>
+                  <!-- <p style="border-left: 2px solid #FFF">
                     Developed programs to extract and transform data from clinical systems to MS SQL database,
                     by using C# and SQL, which enlarged the medical research data warehouse by 10,000+ patients’ records.
-                  </p>
+                  </p> -->
                   <br><br>
                 </div>
               </li>

@@ -209,7 +209,7 @@ a:focus {
   margin-left: 20px;
   border-left: 1px solid #EEE;
   color : #E8F1F2;
-  font : normal 16px/30px 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 .resume-title div {
