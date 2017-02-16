@@ -71,7 +71,7 @@
           <div class="ray-top ray2"></div>
           <div class="ray-top ray3"></div>
           <div class="row text-center section_heading padding_bottom_80px">
-            <h2><b><span class="font_raleway text_transform_uppercase">Skills</span></b></h2>
+            <h2><b><span class="font_raleway text_transform_uppercase" ng-bind="sectionHeadingObj.skillsHead"></span></b></h2>
           </div>
           <div class="row text-center">
             <div class="tag">HTML</div><div class="tag opacity_0p75">CSS</div>
@@ -98,7 +98,7 @@
           <div class="ray-top ray2"></div>
           <div class="ray-top ray3"></div>
           <div class="row text-center section_heading">
-            <h2><b><span class="font_raleway text_transform_uppercase">Projects</span></b></h2>
+            <h2><b><span class="font_raleway text_transform_uppercase" ng-bind="sectionHeadingObj.projectsHead"></span></b></h2>
           </div>
           <div class="row">
             <br><br>
@@ -137,9 +137,7 @@
           <div class="ray-top ray2"></div>
           <div class="ray-top ray3"></div>
           <div class="row section_heading col-sm-offset-2 col-sm-8 text-center">
-            <h2><b><span class="font_raleway text_transform_uppercase">
-              Experiences
-            </span></b></h2>
+            <h2><b><span class="font_raleway text_transform_uppercase" ng-bind="sectionHeadingObj.experiencesHead"></span></b></h2>
           </div>
           <div>
             <br><br>
@@ -201,9 +199,7 @@
           <div class="ray-top ray2"></div>
           <div class="ray-top ray3"></div>
           <div class="row section_heading col-sm-offset-2 col-sm-8 text-center">
-            <h2><b><span class="font_raleway text_transform_uppercase">
-              Education
-            </span></b></h2>
+            <h2><b><span class="font_raleway text_transform_uppercase" ng-bind="sectionHeadingObj.educationHead"></span></b></h2>
           </div>
           <div>
             <br><br>
@@ -215,10 +211,10 @@
               <li><h2><span class="ti-bookmark-alt"></span><h2></li>
               <li class="resume-title">
                 <div>
-                  <h3>University at Buffalo, The State University of New York</h3>
-                  <h4><i>Master of Science in </i><b>Management Information Systems</b></h4>
+                  <h3 ng-bind="schoolObj.masterSchool"></h3>
+                  <h4><b ng-bind="schoolObj.masterMajor"></b>&nbsp;&nbsp;<i ng-bind="schoolObj.masterDegree"></i></h4>
                   <span class="time_range">
-                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2013.8-2014.9</i>
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway" ng-bind="schoolObj.masterTime"></i>
                   </span>
                 </div>
               </li>
@@ -226,10 +222,10 @@
               <br>
               <li class="resume-title">
                 <div>
-                  <h3>Beijing University of Posts and Telecommunications</h3>
-                  <h4><i>Bachelor of Science in </i><b>E-Commerce Engineering with Law</b></h4>
+                  <h3 ng-bind="schoolObj.bachelorSchool"></h3>
+                  <h4><b ng-bind="schoolObj.BachelorMajor"></b>&nbsp;&nbsp;<i ng-bind="schoolObj.bachelorDegree"></i></h4>
                   <span class="time_range">
-                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway">2009.9-2013.6</i>
+                    <i class="ti-calendar"></i>&nbsp;&nbsp;<i class="font_raleway" ng-bind="schoolObj.bachelorTime"></i>
                   </span>
                 </div>
               </li>
@@ -243,9 +239,7 @@
           <div class="ray-top ray2"></div>
           <div class="ray-top ray3"></div>
           <div class="row section_heading col-sm-offset-2 col-sm-8 text-center padding_bottom_80px">
-            <h2><b><span class="font_raleway text_transform_uppercase">
-              Contact
-            </span></b></h2>
+            <h2><b><span class="font_raleway text_transform_uppercase" ng-bind="sectionHeadingObj.knowmoreHead"></span></b></h2>
           </div>
           <div>
             <br><br>
@@ -262,8 +256,8 @@
           <div class="row">
             <div class="col-sm-offset-3 col-sm-6 text-center">
               <p class="en color_anti_flash_white font_raleway font_size_20px">
-                <a href="resume/resume_tongpei.pdf" class="color_anti_flash_white" target="_blank">
-                  <span class="ti-clipboard"></span>&nbsp;&nbsp;Download Resume
+                <a ng-href="{{resumeObj.resumeFile}}" class="color_anti_flash_white" target="_blank">
+                  <span class="ti-clipboard"></span>&nbsp;&nbsp;<span ng-bind="resumeObj.resumeText"></span>
                 </a>
               </p>
             </div>

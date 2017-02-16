@@ -23,6 +23,24 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog, langService){
     "ch" : {"jobTitle" : "网络工程师"}
   }
 
+  //** Array of section headings
+  var sectionHeadingObj = {
+    "en" : {
+      "skillsHead" : "Skills",
+      "projectsHead" : "Projects",
+      "experiencesHead" : "Experiences",
+      "educationHead" : "Education",
+      "knowmoreHead" : "Know More"
+    },
+    "ch" : {
+      "skillsHead" : "擅长技术",
+      "projectsHead" : "项目经验",
+      "experiencesHead" : "工作经历",
+      "educationHead" : "教育背景",
+      "knowmoreHead" : "了解更多"
+    }
+  }
+
   //** Array of project title
   var projectTitleObj = {
     "en" : {
@@ -145,16 +163,55 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog, langService){
     }
   }
 
+  //** Array for school
+  var schoolObj = {
+    "en" : {
+      "masterSchool" : "The State University of New York",
+      "masterDegree" : "Master of Science",
+      "masterMajor" : "Management Information Systems",
+      "masterTime" : "2013.9-2014.9",
+      "bachelorSchool" : "Beijing University of Posts and Telecommunications",
+      "bachelorDegree" : "Bachelor of Science",
+      "BachelorMajor" : "E-Commerce Engineering with Law",
+      "bachelorTime" : "2009.9-2013.6"
+    },
+    "ch" : {
+      "masterSchool" : "美国纽约州立大学",
+      "masterDegree" : "硕士学位",
+      "masterMajor" : "信息系统管理",
+      "masterTime" : "2013.9-2014.9",
+      "bachelorSchool" : "北京邮电大学",
+      "bachelorDegree" : "学士学位",
+      "BachelorMajor" : "电子商务及法律",
+      "bachelorTime" : "2009.9-2013.6"
+    }
+  }
+
+  //** Array for resume
+  var resumeObj = {
+    "en" : {
+      "resumeText" : "Download Resume",
+      "resumeFile" : "resume/Tongpei_webAppDeveloper_resume_English.pdf"
+    },
+    "ch" : {
+      "resumeText" : "下载我的简历",
+      "resumeFile" : "resume/翟彤培_网络工程师_简历_中文.pdf"
+    }
+  }
+
   $scope.$watch('langService.getLang()',
   function(newVal, oldVal){
     var lang = $scope.langService.getLang();
     $scope.dvlpNameObj = dvlpNameObj[lang];
     $scope.jobTitleObj = jobTitleObj[lang];
+    $scope.sectionHeadingObj = sectionHeadingObj[lang];
     $scope.projectTitleObj = projectTitleObj[lang];
     $scope.projectCategoryObj = projectCategoryObj[lang];
     $scope.exprjobTitleObj = exprjobTitleObj[lang];
     $scope.employerObj = employerObj[lang];
     $scope.jobDescriptionObj = jobDescriptionObj[lang];
+    $scope.schoolObj = schoolObj[lang];
+    $scope.resumeObj = resumeObj[lang];
   }, true);
 
   $scope.onLangChange = function(langName){

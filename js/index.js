@@ -4,7 +4,7 @@ $(document).ready(function() {
     verticalCentered: false,
     navigation: {
       'position': 'right',
-      'tooltips': ['Home', 'Skills', 'Projects', 'Experiences', 'Education', 'Contact']
+      'tooltips': ['Home', 'Skills', 'Projects', 'Experiences', 'Education', 'More']
     }
   });
 });
