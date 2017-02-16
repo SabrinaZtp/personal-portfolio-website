@@ -1,6 +1,5 @@
 /* Override section class */
 .section {
-  padding-top: 80px;
   overflow-x: hidden;
 }
 
@@ -52,7 +51,7 @@ a:focus {
 
 /* Language bar */
 .langBar {
-  background-color: #05C1FD;
+  background-color: transparent;
   padding-top: 20px;
   font-family: 'Raleway', 'Microsoft YaHei', sans-serif;
 }
@@ -76,6 +75,10 @@ a:focus {
 }
 
 /* Heading of section */
+.section_heading {
+  padding-top: 80px;
+}
+
 .section_heading span{
   border: 4px solid #FFF;
   padding: 5px 20px;

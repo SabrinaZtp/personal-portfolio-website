@@ -31,15 +31,6 @@
   </head>
   <body ng-app="portfolioApp" ng-controller="resumeCtrl" ng-clock>
 
-    <!-- Language bar -->
-    <div class="row langBar">
-      <div class="col-sm-2 pull-right btn-group" role="group" aria-label="">
-        <button type="button" class="btn btn-xs btn-info" ng-class="langObj.en.isActive?'active':''"
-        ng-bind="langObj.en.langText" ng-click="onLangChange(langObj.en.langName)"></button>
-        <button type="button" class="btn btn-xs btn-info" ng-class="langObj.ch.isActive?'active':''"
-        ng-bind="langObj.ch.langText" ng-click="onLangChange(langObj.ch.langName)"></button>
-      </div>
-    </div>
 
     <!-- Main content -->
     <div id="pagepiling">
@@ -48,7 +39,16 @@
           <div class="ray-top ray1"></div>
           <div class="ray-top ray2"></div>
           <div class="ray-top ray3"></div>
-          <div class="row padding_bottom_50px">
+          <!-- Language bar -->
+          <div class="row langBar">
+            <div class="col-sm-2 pull-right btn-group" role="group" aria-label="">
+              <button type="button" class="btn btn-xs btn-info" ng-class="langObj.en.isActive?'active':''"
+              ng-bind="langObj.en.langText" ng-click="onLangChange(langObj.en.langName)"></button>
+              <button type="button" class="btn btn-xs btn-info" ng-class="langObj.ch.isActive?'active':''"
+              ng-bind="langObj.ch.langText" ng-click="onLangChange(langObj.ch.langName)"></button>
+            </div>
+          </div>
+          <div class="row section_heading padding_bottom_50px">
             <img src="img/portrait1_1.png"
               class="img-responsive center-block" alt="portrait" />
           </div>
