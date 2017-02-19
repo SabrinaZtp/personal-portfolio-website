@@ -2,7 +2,7 @@
   <form ng-cloak>
 
     <md-toolbar>
-      <div class="md-toolbar-tools">
+      <div class="md-toolbar-tools col-sm-12">
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel();" aria-label="close dialog">
           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
@@ -13,10 +13,12 @@
     <md-dialog-content>
       <div class="md-dialog-content font_raleway">
         <div class="row">
-          <div ng-repeat="pimgsrc in projectImgsrc track by $index"
-            ng-class="{'row padding_bottom_20px':$index%2==1}">
-            <img class="col-sm-6" ng-src="{{pimgsrc}}" alt="{{pimgsrc}}"
-            ng-click="showImage(pimgsrc, $event)">
+          <div class="col-sm-12">
+            <div ng-repeat="pimgsrc in projectImgsrc track by $index"
+              ng-class="{'row padding_bottom_20px':$index%2==1}">
+              <img class="col-sm-6" ng-src="{{pimgsrc}}" alt="{{pimgsrc}}"
+              ng-click="showImage(pimgsrc, $event)">
+            </div>
           </div>
         </div>
         <h3 ng-bind="(projectCategory)+' for '+(projectTitle)"></h3>
