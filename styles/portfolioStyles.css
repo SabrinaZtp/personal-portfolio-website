@@ -1,0 +1,225 @@
+/* Override section class */
+.section {
+  overflow-x: hidden; }
+
+/* Anchor */
+a, a:hover {
+  text-decoration: none; }
+
+a:focus {
+  outline: none;
+  text-decoration: none; }
+
+/* Get rid of the focus highlight */
+*:focus {
+  outline: none; }
+
+/* Color */
+.color_anti_flash_white {
+  color: #E8F1F2; }
+
+.color_white {
+  color: #FFF; }
+
+/* Font */
+.body {
+  font-family: 'Raleway', 'Microsoft YaHei', sans-serif; }
+
+.font_raleway {
+  font-family: "Raleway", "Microsoft YaHei", sans-serif; }
+
+/* Font size */
+.font_size_50px {
+  font-size: 50px; }
+
+.font_size_24px {
+  font-size: 24px; }
+
+.font_size_20px {
+  font-size: 20px; }
+
+/* Language bar */
+.langBar {
+  background-color: transparent;
+  padding-top: 20px;
+  font-family: "Raleway", "Microsoft YaHei", sans-serif; }
+
+/* Text transform */
+.text_transform_uppercase {
+  text-transform: uppercase; }
+
+/* Padding */
+.padding_bottom_50px {
+  padding-bottom: 50px; }
+
+.padding_bottom_20px {
+  padding-bottom: 20px; }
+
+.padding_bottom_80px {
+  padding-bottom: 80px; }
+
+/* Heading of section */
+.section_heading {
+  padding-top: 80px; }
+
+.section_heading span {
+  border: 4px solid #FFF;
+  padding: 5px 20px;
+  color: #FFF; }
+
+.section_heading h2:before {
+  width: 12%;
+  height: 8px;
+  background: url(../img/bg_pixelLine.png) repeat;
+  display: inline-block;
+  content: "";
+  position: relative;
+  top: -5px;
+  margin: 0 20px 0 0;
+  opacity: 0.7; }
+
+.section_heading h2:after {
+  width: 12%;
+  height: 8px;
+  background: url(../img/bg_pixelLine.png) repeat;
+  display: inline-block;
+  content: "";
+  position: relative;
+  top: -5px;
+  margin: 0 0 0 20px;
+  opacity: 0.7; }
+
+/* Skill tag */
+.tag {
+  background-color: #1b98e0;
+  /*$color_bright_cerulean_blue*/
+  color: #E8F1F2;
+  font-size: 1.17em;
+  font-family: "Raleway", "Microsoft YaHei", sans-serif;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 4px 10px;
+  margin-right: 15px;
+  margin-bottom: 15px; }
+
+.tag.opacity_0p75 {
+  background-color: rgba(27, 152, 224, 0.75); }
+
+.tag.opacity_0p5 {
+  background-color: rgba(27, 152, 224, 0.5); }
+
+/* Project image */
+.projectImgWrapper {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; }
+
+.projectImage {
+  position: relative;
+  top: 0px;
+  transition: top 0.5s; }
+
+.projectImgWrapper:hover .projectImage {
+  top: -30px; }
+
+/* Project label */
+.imgLabel {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  bottom: -40px;
+  transition: bottom 0.5s; }
+
+.imgLabel-text {
+  position: relative;
+  z-index: 2; }
+
+.projectImgWrapper:hover .imgLabel {
+  bottom: 0px; }
+
+.text-title {
+  color: #E8F1F2; }
+
+.text-category {
+  display: block; }
+
+.text-category span {
+  display: inline;
+  margin-left: 5px;
+  color: #CCC;
+  font-size: 12px; }
+
+.label-bg {
+  background: #1B98E0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+/* Resume list */
+.resume-list li {
+  list-style: none; }
+
+.resume-list h2, .resume-list h3, .resume-list h4, .resume-list h5 {
+  font-family: "Raleway", "Microsoft YaHei", sans-serif;
+  color: #E8F1F2;
+  margin-bottom: 20px; }
+
+.resume-list .time_range {
+  border: 2px solid #E8F1F2;
+  padding: 2px 10px;
+  color: #E8F1F2;
+  margin-bottom: 20px; }
+
+.resume-list li p {
+  padding-left: 5px;
+  margin-left: 20px;
+  border-left: 1px solid #E8F1F2;
+  color: #E8F1F2;
+  font-size: 16px; }
+
+.resume-title div {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px; }
+
+.resume-title:hover {
+  background-color: #02b5ee;
+  transition: background-color 0.5s; }
+
+.resume-content p {
+  border-left: 2px solid #FFF; }
+
+/* Override md-toolbar */
+md-toolbar:not(.md-menu-toolbar) {
+  background-color: inherit;
+  color: #CCC; }
+
+/* Shape of right parallelogram */
+.ray-top {
+  width: 560px;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: -35%;
+  z-index: -1;
+  background-color: transparent;
+  margin: 0 auto;
+  background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.02));
+  background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.02));
+  transform: skew(-35deg);
+  -o-transform: skew(-35deg);
+  -moz-transform: skew(-35deg);
+  -webkit-transform: skew(-35deg); }
+
+.ray1 {
+  margin: 0 0 0 126px; }
+
+.ray2 {
+  margin: 0 0 0 30px; }
+
+.ray3 {
+  margin: 0 0 0 -190px; }
+
+/*# sourceMappingURL=portfolioStyles.css.map */
