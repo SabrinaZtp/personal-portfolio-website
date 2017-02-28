@@ -1,8 +1,13 @@
-portfolioApp.controller('resumeCtrl', function($scope, $mdDialog, langService){
+portfolioApp.controller('resumeCtrl', function($scope, $mdDialog, $timeout, langService){
 
+  $scope.isShowPage = false;
   $scope.programmerHiddenOrNot = true;
   $scope.internHiddenOrNot = true;
   $scope.langService = langService;
+
+  $timeout(function(){
+    $scope.isShowPage = true;
+  }, 1000);
 
   //** Array for language
   var langObj = {
