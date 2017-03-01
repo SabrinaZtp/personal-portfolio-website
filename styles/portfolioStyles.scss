@@ -6,6 +6,11 @@ $color_page_blue: #05C1FD;
 $color_page_blue_darker: #02b5ee;
 $font_raleway: 'Raleway', 'Microsoft YaHei', sans-serif;
 
+/* Hiding cloaked elements until templates compile */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 /* Google font */
 /* Raleway latin-ext */
 @font-face {

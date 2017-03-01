@@ -7,7 +7,9 @@ portfolioApp.controller('resumeCtrl', function($scope, $mdDialog, $timeout, lang
 
   $timeout(function(){
     $scope.isShowPage = true;
+    console.log($scope.isShowPage);
   }, 1000);
+  console.log("outside "+$scope.isShowPage);
 
   //** Array for language
   var langObj = {
